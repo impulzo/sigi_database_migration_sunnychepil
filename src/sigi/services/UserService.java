@@ -2,7 +2,6 @@ package sigi.services;
 
 import java.util.ArrayList;
 
-import org.mindrot.jbcrypt.BCrypt;
 
 import sigi.database.dao.UserDao;
 import sigi.database.dto.UserDto;
@@ -27,7 +26,7 @@ public class UserService {
 
 	public void execute() {
 		this.migrateUsers();
-		this.migrateMyUsers();
+		this.migrateUserss();
 	
 		
 	}
@@ -42,7 +41,7 @@ public class UserService {
 			
 			for(UserDto dto: users) {
 				
-				System.out.println("Load: User -->"+dto.getUserName()+"password "+dto.getPassword()+" Email: "+dto.getEmail()/*+" "+dto.getProfile()*/);
+				
 			}
 			
 		}catch(Exception e) {
@@ -50,14 +49,14 @@ public class UserService {
 		}
 	}
 
-	public void migrateMyUsers(){
+	public void migrateUserss(){
 		try{
              dao.setDataSource(DataSourceFactory.getDataSource("MySql"));
 
 			 if(dao.setUsers(this.users)){
-				System.out.println("Insersion con exito");
+				
 			 }else{
-				System.out.println("Error ...");
+				
 			 }
 
 			

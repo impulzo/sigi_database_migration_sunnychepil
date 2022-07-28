@@ -36,14 +36,11 @@ public class UserDao {
 			while(rs.next()) {
 				UserDto user = new UserDto();
 				String hashed;
-				hashed=BCrypt.hashpw("",BCrypt.gensalt());
+				hashed=BCrypt.hashpw(rs.getString("Password"),BCrypt.gensalt());
+				user.setPassword(hashed);
 				user.setUserName(rs.getString("Username"));
-				user.setPassword(rs.getString("Password"));
-				
-				user.setEmail(rs.getString("Email"));
-			/* 	user.SetProfile(rs.getString("Profile"));*/
-			user.setPassword(hashed);
-				users.add(user);
+                user.setEmail(rs.getString("Email"));
+			    users.add(user);
 			}
 			
 			
@@ -56,14 +53,14 @@ public class UserDao {
 		return users;
 	}
 
-	public boolean setUsers(ArrayList<UserDto> myusers){
+	public boolean setUsers(ArrayList<UserDto> userss){
 		boolean flag = false;
 		try{
 			
 			 
 			 
 			String sql = "Insert into users(name,password,email) VALUES( ?, ?,?)";
-			for (UserDto u:myusers) {
+			for (UserDto u:userss) {
 			
 				PreparedStatement ps= this.dataSource.getConection().prepareStatement(sql);
 				

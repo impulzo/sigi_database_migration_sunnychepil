@@ -34,7 +34,7 @@ public class VehiclesService {
         vehicle = dao.getListVehicles();
         
         for(VehiclesDto vdto:vehicle){
-            System.out.println("Load--Brand "+vdto.getBrand()+" Model"+vdto.getModel()+" Licence"+vdto.getLicenceP()+" Alias"+vdto.getAlias()+" Description"+vdto.getDescription()+" KM"+vdto.getKm());
+           
         }
     } catch (Exception e) {
         e.printStackTrace();
@@ -45,9 +45,9 @@ public class VehiclesService {
     try {
         dao.setDataSource(DataSourceFactory.getDataSource("MySql"));
         if (dao.setVehicles(this.vehicle)) {
-            System.out.println("Insersion con exito");
+   
 			 }else{
-				System.out.println("Error ...");
+			
             
         }
     } catch (Exception e) {

@@ -1,9 +1,10 @@
 package sigi.database.dto;
 
-public class AccountingAccountsDto {
+public class WorkDto {
     
     private String name;
     private String description;
+    private String code;
     private int status;
     private int accountType;
 
@@ -22,7 +23,14 @@ public class AccountingAccountsDto {
    public void setDescription(String description){
        this.description = description;
    }
+   public String getCode(){
+    return code;
+   }
 
+   public void setCode(String code){
+    this.code = code;
+   }
+ 
    public int getStatus(){
     return status;
    }

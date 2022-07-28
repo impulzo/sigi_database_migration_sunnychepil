@@ -53,11 +53,11 @@ public class VehiclesDao {
     }
 
     
-    public boolean setVehicles(ArrayList<VehiclesDto> myvehicles){
+    public boolean setVehicles(ArrayList<VehiclesDto> vehicles){
         boolean flag=false;
-        try {
+         try {
             String sql = "Insert into vehicles(brand, model, license_plate, alias, description, km) VALUES ( ?, ?, ?, ?, ?, ?)";
-            for(VehiclesDto v:myvehicles){
+            for(VehiclesDto v:vehicles){
                 PreparedStatement ps= this.dataSource.getConection().prepareStatement(sql);
                 ps.setString(1, v.getBrand());
                 ps.setString(2, v.getModel());
@@ -68,8 +68,9 @@ public class VehiclesDao {
                 ps.executeUpdate();
             }
             flag = true;
-        } catch (Exception e) {
-            e.printStackTrace();
-    }return flag;
+         }catch (Exception e) {
+              e.printStackTrace();
+    }
+         return flag;
 }
 }
