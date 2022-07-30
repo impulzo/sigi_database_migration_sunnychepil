@@ -14,7 +14,7 @@ public class MySqlDataSourceImp implements IDataSource {
 
     private final String port = "3306";
 
-    private final String database = "alfredo";
+    private final String database = "sunnyche_el3ctrify";
 
     private final String user = "root";
     

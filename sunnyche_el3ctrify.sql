@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 28-07-2022 a las 04:22:30
+-- Tiempo de generación: 30-07-2022 a las 21:24:17
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.11
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `alfredo`
+-- Base de datos: `sunnyche_el3ctrify`
 --
 
 -- --------------------------------------------------------
@@ -1718,7 +1718,24 @@ INSERT INTO `vehicles` (`id`, `brand`, `model`, `license_plate`, `alias`, `descr
 (59, 'CHRYSLER RAM', 'RAM 4000', 'K53AYB', 'Ram Azul', 'RAM AZUL 4000', 1635700, NULL, NULL),
 (60, 'Ford courier', '2007', 'RY28730', 'Courier roja', 'Courier roja', 159360, NULL, NULL),
 (61, 'Nissan', '2020', 'RY53145', 'Estaquita blanca', 'Nissan estaquita blanca.', 50150, NULL, NULL),
-(62, 'Toyota', '2021', 'RY53933', 'Hilux blanca', 'Toyota Hilux blanca.', 22400, NULL, NULL);
+(62, 'Toyota', '2021', 'RY53933', 'Hilux blanca', 'Toyota Hilux blanca.', 22400, NULL, NULL),
+(63, 'Mitsubishi', 'L200', 'NFE7337', 'Mitsubishi', 'CAMIONETA GRIS', 69680, NULL, NULL),
+(64, 'Courier ', '2011', 'MYE2034', 'Courier', 'Courier blanca', 216200, NULL, NULL),
+(65, 'INTERNATIONAL', '1993', 'RX55356', 'Grúa café', 'Grúa international café', 999664925, NULL, NULL),
+(66, 'Freightliner', '2002', 'RW31321', 'Grua freightliner', 'Grua freightliner blanca', 996483100, NULL, NULL),
+(67, 'Ram', '2009', 'RW83532', 'Ram 1500', 'Ram 1500 roja', 1301363, NULL, NULL),
+(68, 'NISSAN', 'NP300', 'RW-24-385', 'NISSAN NP300', 'SNV-003', 174920, NULL, NULL),
+(69, 'NISSAN', 'ESTACA', 'RX-02-126', 'NISSAN ESTACA', 'SNV-004', 1140115, NULL, NULL),
+(70, 'DODGE (CHRYSLER)', 'RAM 4000', 'SJ-26-889', 'DODGE (CHRYSLER) RAM 4000', 'SNV-005', 194600, NULL, NULL),
+(71, 'CHEVROLET 3500 (GM)', 'R36003', 'RW-31-320', 'CHEVROLET 3500 (GM) R36003', 'SNV-006', 106450, NULL, NULL),
+(72, 'FORD', '(IKON O FIESTA)', 'MXB-18-29', 'FORD (IKON O FIESTA)', 'SNV-007', 267200, NULL, NULL),
+(73, 'RENAULT', 'KANGOO EZPRESS', 'J99-AVY', 'RENAULT KANGOO EZPRESS', 'SNV-008', 115220, NULL, NULL),
+(74, 'PERNKIS', '', '533-AH-2', 'PERNKIS ', 'SNGA-003', 9962385, NULL, NULL),
+(75, 'Chevrolet', '2017', 'MYJ6364', 'Spark', 'Spark Verde uso personal Ing. Eymard', 126100, NULL, NULL),
+(76, 'CHRYSLER RAM', 'RAM 4000', 'K53AYB', 'Ram Azul', 'RAM AZUL 4000', 1635700, NULL, NULL),
+(77, 'Ford courier', '2007', 'RY28730', 'Courier roja', 'Courier roja', 159360, NULL, NULL),
+(78, 'Nissan', '2020', 'RY53145', 'Estaquita blanca', 'Nissan estaquita blanca.', 50150, NULL, NULL),
+(79, 'Toyota', '2021', 'RY53933', 'Hilux blanca', 'Toyota Hilux blanca.', 22400, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1750,7 +1767,8 @@ INSERT INTO `works` (`id`, `name`, `description`, `code`, `status`, `accounting_
 (109, 'INSTALACIÓN DE MALLA PERIMETRAL EN SUBESTACIÓN POCHUTLA ', 'BARDAMIENTO CON MALLA PARA LA SUBESTACION DE CFE', '7.01.067.00.000', 1, 1, NULL, NULL, NULL, NULL),
 (110, 'INSTALACIÓN DE SUBESTACIÓN PARTICULAR WALTMART AGUASCALIENTES', 'INSTALACIÓN DE SUBESTACION EN BODEGA AURRERA GRUPO WALTMART', '7.01.068.00.000', 1, 1, NULL, NULL, NULL, NULL),
 (111, 'INSTALACIÓN DE SUBESTACIÓN PARTICULAR WALTMART AGUASCALIENTES', 'INSTALACIÓN DE SUBESTACION EN BODEGA AURRERA GRUPO WALTMART', '7.01.068.00.000', 1, 1, NULL, NULL, NULL, NULL),
-(112, 'INSTALACIÓN DE SUBESTACIÓN PARTICULAR WALTMART AGUASCALIENTES', 'INSTALACIÓN DE SUBESTACION EN BODEGA AURRERA GRUPO WALTMART', '7.01.068.00.000', 1, 1, NULL, NULL, NULL, NULL);
+(112, 'INSTALACIÓN DE SUBESTACIÓN PARTICULAR WALTMART AGUASCALIENTES', 'INSTALACIÓN DE SUBESTACION EN BODEGA AURRERA GRUPO WALTMART', '7.01.068.00.000', 1, 1, NULL, NULL, NULL, NULL),
+(113, 'INSTALACIÓN DE SUBESTACIÓN PARTICULAR WALTMART AGUASCALIENTES', 'INSTALACIÓN DE SUBESTACION EN BODEGA AURRERA GRUPO WALTMART', '7.01.068.00.000', 1, 1, NULL, NULL, NULL, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -2169,19 +2187,19 @@ ALTER TABLE `translations`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT de la tabla `vehicles`
 --
 ALTER TABLE `vehicles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT de la tabla `works`
 --
 ALTER TABLE `works`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- Restricciones para tablas volcadas
