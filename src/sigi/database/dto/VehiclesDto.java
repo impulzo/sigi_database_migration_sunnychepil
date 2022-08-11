@@ -8,45 +8,52 @@ public class VehiclesDto {
     private String description;
     private Long km;
 
-    public String getBrand(){
+    public String getBrand() {
         return brand;
     }
-    public void setBrand(String brand){
+
+    public void setBrand(String brand) {
         this.brand = brand;
     }
 
-    public String getModel(){
+    public String getModel() {
         return model;
     }
 
-    public void setModel(String model){
+    public void setModel(String model) {
         this.model = model;
     }
 
-    public String getLicenceP(){
+    public String getLicenceP() {
         return licenceP;
     }
-    public void setLicenceP(String licenceP){
+
+    public void setLicenceP(String licenceP) {
         this.licenceP = licenceP;
     }
 
-    public String getAlias(){
+    public String getAlias() {
         return alias;
     }
-    public void setAlias(String alias){
+
+    public void setAlias(String alias) {
         this.alias = alias;
     }
-    public String getDescription(){
+
+    public String getDescription() {
         return description;
     }
-    public void setDescription(String description){
+
+    public void setDescription(String description) {
         this.description = description;
     }
-    public Long getKm(){
-        
+
+    public Long getKm() {
+
         return km;
     }
-    public void setKm(Long km){
+
+    public void setKm(Long km) {
 
         this.km = km;
     }
